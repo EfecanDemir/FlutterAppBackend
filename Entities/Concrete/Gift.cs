@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Entities.Abstract;
 
-namespace Entities
+namespace Entities.Concrete
 {
-    public class Gift
+    public class Gift:IEntity
     {
         public int Id { get; set; }
         public string GiftName { get; set; }

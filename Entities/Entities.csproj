@@ -5,12 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Abstract\**" />
-    <Compile Remove="Concrete\**" />
-    <EmbeddedResource Remove="Abstract\**" />
-    <EmbeddedResource Remove="Concrete\**" />
-    <None Remove="Abstract\**" />
-    <None Remove="Concrete\**" />
+    <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
 
 </Project>
