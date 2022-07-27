@@ -10,7 +10,7 @@ namespace Entities.Concrete
     { 
         public int Id { get; set; }
         public int CouponId { get; set; }
-        public int RateId { get; set; }
+        public int QuestionId { get; set; }
         public bool TaskStatus { get; set; }
 
     }
