@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Utilities.Result;
+using Entities.Concrete;
 
 namespace Business.Abstract
 {
-    class ICategoryService
+    public interface ICategoryService
     {
+        IDataResult<List<Category>> GetAll();
     }
 }

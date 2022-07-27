@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Core.Entities.Concrete;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
-using Task = Entities.Concrete.Task;
 
 namespace DataAccess.Concrete.EntityFramework
 {
@@ -17,8 +16,7 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Gift> Gifts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Question> Questions { get; set; }
-        public DbSet<Rate> Rates { get; set; }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<Duty> Duties { get; set; }
         public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

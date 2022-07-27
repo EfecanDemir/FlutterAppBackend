@@ -17,5 +17,7 @@ namespace Entities.Concrete
         public string Image { get; set; }
         public string Description { get; set; }
         public bool Status { get; set; }
+        public double? Positive { get; set; }
+        public double? Negative { get; set; }
     }
 }
