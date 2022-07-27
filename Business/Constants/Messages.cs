@@ -9,6 +9,6 @@ namespace Business.Constants
     public static class Messages
     {
         public static string couponAdded = "Kupon eklendi";
-        public static string categoryAdded = "Kategori eklendi";
+        public static string categoryList = "Kategori listelendi";
     }
 }
