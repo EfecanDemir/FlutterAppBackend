@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
+using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
 using Business.Concrete;
+using Castle.DynamicProxy;
+using Core.Utilities.Security.JWT;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 
@@ -32,6 +35,14 @@ namespace Business.DependencyResolvers.Autofac
 
             builder.RegisterType<QuestionManager>().As<IQuestionService>().SingleInstance();
             builder.RegisterType<EfQuestionDal>().As<IQuestionDal>().SingleInstance();
+
+            builder.RegisterType<UserManager>().As<IUserService>();
+            builder.RegisterType<EfUserDal>().As<IUserDal>();
+
+            builder.RegisterType<AuthManager>().As<IAuthService>().InstancePerLifetimeScope();
+            builder.RegisterType<JwtHelper>().As<ITokenHelper>().InstancePerLifetimeScope();
+
+
         }
     }
 }
